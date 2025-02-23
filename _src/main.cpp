@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
     CORE::clear_terminal();
     time_stamp("It just works");
 
-    Random_floating_point<double> rand;
+    Randoms::Random_floating_point<double> rand;
     double r_value;
     for (;;)
     {
