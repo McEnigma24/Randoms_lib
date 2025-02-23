@@ -10,14 +10,12 @@ int main(int argc, char* argv[])
     CORE::clear_terminal();
     time_stamp("It just works");
 
-    Random_int<u64> rand;
-    u64 r_value;
+    Random_floating_point<double> rand;
+    double r_value;
     for (;;)
     {
-        r_value = rand.random_int_in_range(10, 1);
+        r_value = rand.random_floating_in_range(-10.0f, 10.0f);
         var(r_value);
-
-        if (!(1 <= r_value && r_value <= 10)) { break; }
     }
 
     return 0;
