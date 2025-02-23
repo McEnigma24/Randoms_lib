@@ -12,6 +12,14 @@ struct Random_f
     static T random_unit_0_to_1() { return (T)(rand() % div_range + 1) / (T)(div_range); }
 
     static T random_unit_minus_1_to_1() { return ((T)(rand() % div_range + 1) / (T)(div_range / 2)) - (T)(1); }
+
+    static T distance_between_numbers(int64_t a, int64_t b)
+    {
+        double ret = a - b;
+        return (ret > 0) ? ret : -ret;
+    }
+
+    // przemnożyć 0_1 przez range i dodać do najmniejszej
 };
 
 template <typename T>
