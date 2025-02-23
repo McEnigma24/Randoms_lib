@@ -19,13 +19,13 @@ struct Random_int
 {
     static T distance_between_numbers(T a, T b)
     {
-        T ret = a - b;
+        int64_t ret = a - b;
         return (ret > 0) ? ret : -ret;
     }
 
     static T random_int_in_range(T a, T b)
     {
-        T range = distance_between_numbers(a, b);
+        T range = distance_between_numbers(a, b) + 1;
 
         T r = rand() % range;
 
