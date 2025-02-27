@@ -14,6 +14,7 @@ int main(int argc, char* argv[])
     for (;;)
     {
         r_value = Randoms::Random_floating_point<double>::random_floating_in_range(-10.0f, 10.0f);
+
         var(r_value);
     }
 
