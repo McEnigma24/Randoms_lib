@@ -28,7 +28,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp -g -Wfatal-errors -Werror=unini
 
 set(CONST_TARGET_NAME "Randoms")
 
-option(BUILD_LIBRARY "Build library instead of library executable" ON)
+option(BUILD_LIBRARY "Build library instead of library executable" OFF)
 
 if(BUILD_LIBRARY)
     set(TARGET_NAME "${CONST_TARGET_NAME}")

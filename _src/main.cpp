@@ -13,7 +13,9 @@ int main(int argc, char* argv[])
     double r_value;
     for (;;)
     {
-        r_value = Randoms::Random_floating_point<double>::random_floating_in_range(-10.0f, 10.0f);
+        // r_value = Randoms::Random_floating_point<double>::random_floating_in_range(-10.0f, 10.0f);
+        // r_value = Randoms::Random_floating_point<double>::random_unit_0_to_1();
+        r_value = Randoms::Random_floating_point<double>::random_unit_minus_1_to_1_range(10);
 
         var(r_value);
     }

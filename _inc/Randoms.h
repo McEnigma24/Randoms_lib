@@ -9,11 +9,11 @@ namespace Randoms
     template <typename T>
     struct Random_floating_point
     {
-        static const u64 div_range = 1000000;
+        static T random_unit_0_to_1() { return ((T)(rand()) / (T)RAND_MAX); }
+        static T random_unit_minus_1_to_1() { return ((T)(rand() / (T)(RAND_MAX / 2)) - (T)(1)); }
 
-        static T random_unit_0_to_1() { return (T)(rand() % div_range + 1) / (T)(div_range); }
-
-        static T random_unit_minus_1_to_1() { return ((T)(rand() % div_range + 1) / (T)(div_range / 2)) - (T)(1); }
+        static T random_unit_0_to_1_range(const u64 div_range) { return (T)(rand() % div_range + 1) / (T)(div_range); }
+        static T random_unit_minus_1_to_1_range(const u64 div_range) { return ((T)(rand() % div_range + 1) / (T)(div_range / 2)) - (T)(1); }
 
         static T distance_between_numbers(T a, T b)
         {
@@ -53,4 +53,17 @@ namespace Randoms
             return r + smaller;
         }
     };
+
+    // potem mogę tutaj, dorzucić ten softmax, na stworzenie rozkładu prawdopodobieństwa, dla obiektów //
+
+    // WolframAlpha -> a = 5.0, e^490/a /e^500/a + e^480/a+e^490/a * 100
+
+    // template <class obj_t>
+    // class Choose_random_obj_by_assigned_chance
+    // {
+    //     struct
+
+    //     vector<>
+    // };
+
 } // namespace Randoms
